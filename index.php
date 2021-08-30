@@ -108,7 +108,7 @@ if(!$txa) {$url ="/";echo "<script>window.location.href=decodeURIComponent('".$u
 
 if(!$checknew['value'] or $checknew['value']!=$ip){$_SESSION = array();echo "<script>alert('Your IP is ".$ip.". You need to create a key PLAYER with the value ".$ip." in your name space. (at least 1 confirmation)');history.go(-1);</script>";exit;}
 
-if($timeleft>60){$_SESSION = array();echo "<script>alert('Your PLAYER key is expired. You need to edit the key PLAYER with the value ".$ip." in your name space and post again.');history.go(-1);</script>";exit;}
+if($timeleft>30){$_SESSION = array();echo "<script>alert('Your PLAYER key is expired. You need to edit the key PLAYER with the value ".$ip." in your name space and post again.');history.go(-1);</script>";exit;}
 
 
 			  $namespace=$kpc->keva_get($asset,"_KEVA_NS_");
@@ -160,7 +160,7 @@ $checkkeva=$kpc->keva_get($kevaipwallet,$comm);
 
 						
 
-						$age= $kpc->sendtoaddress($shopaddress,"1");
+						$age= $kpc->sendtoaddress($shopaddress,"0.1");
 
 						//reward
 
@@ -178,9 +178,9 @@ $checkkeva=$kpc->keva_get($kevaipwallet,$comm);
 			  
 			  }
 
-			  $age= $kpc->sendtoaddress($addrone,"1");
+			  $age= $kpc->sendtoaddress($addrone,"0.1");
 						
-						echo "You got 1 free KVA to buy mojo. Wait for confirmation.(2-10 Mins)";
+						echo "You got 0.1 free KVA to buy mojo. Wait for confirmation.(2-10 Mins)";
 						
 						}else
 
@@ -205,14 +205,14 @@ $checkkevab=$kpc->keva_get($kevaipwallet,$commb);
 
 
 
-
+//require('bitdoge.php');
 
 
 
 echo "&nbsp;&nbsp;[ ".$title." ]"." [ ".$comm." ] "." [ Time Left:".(60-$timeleft*2)." MIN ]";
 echo "<br><br>";
 
-if(!$chiacheck['value']){echo "&nbsp;&nbsp;<font color=green>You need to create a key CHIA with the value your xch wallet address in your name space.</font> Now use demo address <a target=\"_blank\"  href=\"https://www.chiaexplorer.com/blockchain/address/xch1n92we22h9leh9u69ps0uv3frqg2axeah0wcksv4z6qynjlcrgxds59qnag\"><font color=blue>xch1n92we22h9leh9u69ps0uv3frqg2axeah0wcksv4z6qynjlcrgxds59qnag</font></a><br><br>";}
+if(!$chiacheck['value']){echo "&nbsp;&nbsp;<font color=green>You need to create a key CHIA with the value your xch wallet address in your name space.</font><br>&nbsp;&nbsp;Now use demo address <a target=\"_blank\"  href=\"https://www.chiaexplorer.com/blockchain/address/xch1n92we22h9leh9u69ps0uv3frqg2axeah0wcksv4z6qynjlcrgxds59qnag\"><font color=blue size=2>xch1n92we22h9leh9u69ps0uv3frqg2axeah0wcksv4z6qynjlcrgxds59qnag</font></a><br><br>";}
 else
 	{
 
@@ -489,7 +489,7 @@ echo "</head>";
 echo "<body style=\"background-color: #212121;\">";
 
 
-echo "<div style=\"padding: 5px;margin-bottom: 5px;box-shadow: 2px 2px 2px hsla(0,0%,0%,0.1);background: var(--ck-color-toolbar-background);text-align:right;font-size:10px;\"><p style=\"padding-right:7px;\">[ <font color=grey>".$ip."</font> ] [ <a href=https://github.com/kevacoin-project/keva_wallet/releases target=_blank><font color=grey>KEVA WALLET</font></a> ] [ <a href=\"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="."https://keva.app\" target=_blank><font color=grey>".$blocknum."</font></a> ]</p></div>";
+echo "<div style=\"padding: 5px;margin-bottom: 5px;box-shadow: 2px 2px 2px hsla(0,0%,0%,0.1);background: var(--ck-color-toolbar-background);text-align:right;font-size:10px;\"><p style=\"padding-right:7px;\">[ <a href=https://hackerlink.io/buidl/1175 target=_blank><font color=white>VOTE</font></a> ] [ <font color=grey>".$ip."</font> ] [ <a href=https://github.com/kevacoin-project/keva_wallet/releases target=_blank><font color=grey>KEVA WALLET</font></a> ] [ <a href=\"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="."https://keva.app\" target=_blank><font color=grey>".$blocknum."</font></a> ]</p></div>";
 		
 
 			echo "<form action=\"\" method=\"post\" >";	
